@@ -1,5 +1,8 @@
 from pyspark.sql import SparkSession
 from lib.utils import get_spark_app_config
+
+
+
 if __name__ == "__main__" :
     print("Hello Spark!")
     conf = get_spark_app_config()
@@ -10,7 +13,7 @@ if __name__ == "__main__" :
         .format("csv") \
         .option("header", "true") \
         .option("inferSchema", "true") \
-        .load("./data/Job_Placement_Data.csv")
+        .load("./datasource/Job_Placement_Data.csv")
 
     df.show()
     spark.stop()

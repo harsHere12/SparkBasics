@@ -12,7 +12,7 @@ if __name__ == "__main__" :
 
 
     sc = spark.sparkContext
-    linesRDD = sc.textFile("./data/Job_Placement_Data.csv")
+    linesRDD = sc.textFile("./datasource/Job_Placement_Data.csv")
     cols = []
     for col in linesRDD.first().split(","):
         cols.append(col)
