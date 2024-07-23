@@ -6,5 +6,14 @@ if __name__ == "__main__" :
     spark = SparkSession.builder \
             .config(conf=conf) \
             .getOrCreate()
+    df = spark.read \
+        .format("csv") \
+        .option("header", "true") \
+        .option("inferSchema", "true") \
+        .load("./data/Job_Placement_Data.csv")
+
+    df.show()
     spark.stop()
     print("Spark Session Stopped ")
+
+
