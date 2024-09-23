@@ -1,4 +1,4 @@
-Spark Learning Journey
+# Spark Learning Journey
 Welcome to my Spark learning repository! This repo will contain all my code, experiments, and notes as I dive deeper into Apache Spark.
 
 Overview
